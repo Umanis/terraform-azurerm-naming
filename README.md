@@ -6,9 +6,8 @@
 Common Azure Terraform module to normalize naming on ressources. Based on Microsoft CAF naming.
 
 ```hcl
-
-module "umanis_naming" {
-  source = <<path_to_module>>
+module "naming" {
+  source  = "Umanis/naming/azurerm"
 
   location    = "France Central"
   client      = "XY2"
@@ -23,10 +22,6 @@ module "umanis_naming" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.15.0 |
-
-## Providers
-
-No providers.
 
 ## Inputs
 
@@ -45,3 +40,7 @@ No providers.
 | <a name="output_resource_group_prefixes"></a> [resource\_group\_prefixes](#output\_resource\_group\_prefixes) | Resource group name prefixes for CAF module. |
 | <a name="output_resource_prefixes"></a> [resource\_prefixes](#output\_resource\_prefixes) | Resource name prefixes for CAF module. |
 <!-- END_TF_DOCS -->
+
+## Related documentation
+
+Terraform Azure CAF Naming documentation: [https://registry.terraform.io/providers/aztfmod/azurecaf/latest/docs/resources/azurecaf_name](https://registry.terraform.io/providers/aztfmod/azurecaf/latest/docs/resources/azurecaf_nameV)
